@@ -4,6 +4,14 @@
 <!-- Portfolio Section-->
 <section class="masthead page-section portfolio" id="portfolio">
     <div class="container">
+
+        @if(session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session()->get('message') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
         <!-- Portfolio Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Lista faktur</h2>
         <!-- Icon Divider-->

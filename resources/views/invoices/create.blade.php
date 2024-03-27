@@ -44,6 +44,7 @@
                                 <div class="invalid-feedback" data-sb-feedback="total:required">Wprowadź kwotę.</div>
                             </div>
                             <!-- Submit invoice-->
+
                             <!-- Submit Button-->
                             <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Dodaj fakturę</button>
                         </form>
