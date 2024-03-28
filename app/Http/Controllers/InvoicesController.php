@@ -49,4 +49,12 @@ class InvoicesController extends Controller
 
         return redirect()->route('invoices.index')->with('message', 'Faktura zmieniona poprawnie.');
     }
+
+    public function delete($id)
+    {
+       Invoice::destroy($id);
+
+       return redirect()->route('invoices.index')->with('message', 'Faktura została usunięta.');
+
+    }
 }
