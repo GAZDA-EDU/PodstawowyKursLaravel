@@ -9,7 +9,7 @@ class InvoicesController extends Controller
 {
     public function index()
     {
-        $invoices = Invoice::all();
+        $invoices = Invoice::with('customer')->get();
         return view('invoices.index', ['invoices' => $invoices]);
     }
     public function create()
@@ -31,6 +31,7 @@ class InvoicesController extends Controller
         $invoice->number = $request->number;
         $invoice->date = $request->date;
         $invoice->total = $request->total;
+        $invoice->customer_id = $request->customer;
 
         $invoice->save();
 
