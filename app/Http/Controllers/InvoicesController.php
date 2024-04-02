@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InvoiceStoreRequest;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ class InvoicesController extends Controller
         return view('invoices.edit', ['invoice' => $invoice]);
     }
 
-    public function store(Request $request)
+    public function store(InvoiceStoreRequest $request)
     {
         $invoice = new Invoice();
 
